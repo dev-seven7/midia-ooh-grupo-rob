@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mídia OOH · Grupo ROB</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1c1b19;--mut:#6d6a63;--line:#e4e0d6;--acc:#b5532a;
+--ok:#2f7d4f;--okbg:#e5f2ea;--at:#a36a00;--atbg:#fbf0d9;--cr:#b23a2e;--crbg:#f8e1de;--pa:#6d6a63;--pabg:#ecebe7;
+--new:#2f7d4f;--warm:#a36a00;--old:#b23a2e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151412;--card:#1f1d1a;--ink:#eeebe4;--mut:#a29e95;--line:#33302b;--acc:#e08158;
+--ok:#7cc89a;--okbg:#1d3326;--at:#e7b45a;--atbg:#3a2e14;--cr:#f08a7e;--crbg:#3d1f1b;--pa:#a29e95;--pabg:#2a2825;--new:#7cc89a;--warm:#e7b45a;--old:#f08a7e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:24px 16px 80px}
+header h1{font-size:28px;margin:0 0 4px;letter-spacing:-.02em}
+header p{margin:0;color:var(--mut)}
+.kpis{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.kpi b{font-size:22px;display:block}
+.kpi span{color:var(--mut);font-size:13px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:13px}
+nav a b{color:var(--acc)}
+.agenda{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:18px 0}
+.agenda h2{font-size:17px;margin:0 0 8px}
+.agenda ul{margin:0;padding:0;list-style:none}
+.agenda li{padding:5px 0;border-top:1px dashed var(--line)}
+.agenda li:first-child{border-top:0}
+.agenda li b{display:inline-block;min-width:110px;color:var(--acc)}
+.marca{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:22px 0;scroll-margin-top:60px}
+.mhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.mhead h2{margin:0;font-size:22px}
+.saude{font-size:12px;font-weight:600;padding:4px 10px;border-radius:99px}
+.saude.ok{color:var(--ok);background:var(--okbg)}.saude.atencao{color:var(--at);background:var(--atbg)}
+.saude.critico{color:var(--cr);background:var(--crbg)}.saude.parado{color:var(--pa);background:var(--pabg)}
+h3{font-size:14px;margin:14px 0 6px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+ul{padding-left:20px;margin:0}
+li{margin:3px 0}
+.links{font-size:13px;margin:8px 0 0}
+.links a{color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:6px}
+.box{border:1px solid var(--line);border-radius:10px;padding:2px 14px 12px}
+.box.travado{border-color:var(--at)}
+code{font-size:12.5px;background:var(--pabg);padding:1px 5px;border-radius:4px}
+details{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600}
+.old-t{color:var(--old);font-weight:500}
+.issues{list-style:none;padding:0;margin:10px 0 0}
+.iss{padding:7px 0 7px 12px;border-left:3px solid var(--line);margin:4px 0}
+.iss.new{border-left-color:var(--new)}.iss.warm{border-left-color:var(--warm)}.iss.old{border-left-color:var(--old)}
+.iss a{color:var(--ink);text-decoration:none}
+.iss a:hover{text-decoration:underline}
+.num{color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}
+.meta{font-size:12.5px;color:var(--mut)}
+.mut{color:var(--mut)}
+.pill{font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px}
+.p0{color:var(--cr);background:var(--crbg)}.p1{color:var(--at);background:var(--atbg)}.p2{color:var(--pa);background:var(--pabg)}
+.busca{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;margin-top:10px}
+.leg{font-size:12.5px;color:var(--mut);margin-top:6px}
+.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px;vertical-align:middle}
+footer{color:var(--mut);font-size:12.5px;margin-top:30px}
+
+.chk{list-style:none;padding:0}
+.chk li{padding:4px 0}
+.chk label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.chk input{margin-top:4px;accent-color:var(--acc);flex:none}
+.chk input:checked + *, .chk label:has(input:checked){color:var(--mut);text-decoration:line-through}
+section a{color:var(--acc)}
+.marca p{margin:8px 0}
+
+.tw{overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:620px}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+td a{color:var(--acc)}
+.preco{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:8px}
+.preco .box p{margin:6px 0}
+.big{font-size:22px;font-weight:700}
+img.ex{width:100%;border-radius:10px;border:1px solid var(--line);margin-top:8px}
+.marca p{margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Mídia OOH · Front Light e Painéis Rodoviários</h1>
+  <p>Proposta do fornecedor (via Edilson) pro Grupo ROB · valores e pontos disponíveis em outubro/2026</p>
+</header>
+<div class="kpis">
+  <div class="kpi"><b>24</b><span>pontos em Niterói e acessos</span></div>
+  <div class="kpi"><b>19</b><span>pontos em rodovias</span></div>
+  <div class="kpi"><b>3 meses</b><span>contrato mínimo</span></div>
+</div>
+<nav>
+  <a href="#oferta">📍 O que comercializam</a>
+  <a href="#valores">💰 Valores</a>
+  <a href="#condicoes">📋 Condições</a>
+  <a href="#niteroi">Niterói</a>
+  <a href="#rodovias">Rodovias</a>
+  <a href="#proximos">⏳ Próximos orçamentos</a>
+</nav>
+
+<section id="oferta" class="marca">
+  <div class="mhead"><h2>📍 O que comercializam</h2></div>
+  <ul>
+    <li><b>Front Lights</b> na área urbana de Niterói</li>
+    <li><b>Painéis rodoviários:</b>
+      <ul>
+        <li>BR 101: da Ponte até Rio Bonito</li>
+        <li>RJ 124: Via Lagos</li>
+        <li>RJ 104: do Fonseca até Tribobó</li>
+        <li>RJ 106: de Tribobó até Maricá</li>
+        <li>RJ 116: de Itaboraí até o Comperj</li>
+      </ul></li>
+  </ul>
+  <img class="ex" src="exemplo-outdoor.jpg" alt="Exemplo de painel instalado, enviado pelo fornecedor">
+  <p class="meta">Foto de exemplo enviada pelo Edilson.</p>
+</section>
+
+<section id="valores" class="marca">
+  <div class="mhead"><h2>💰 Valores</h2><span class="saude ok">valores líquidos</span></div>
+  <div class="preco">
+    <div class="box"><h3>Front Light · Niterói</h3>
+      <p>Todos iluminados</p>
+      <p>Custo inicial<br><span class="big">R$ 1.250</span></p>
+      <p>Mensalidade · Centro e Zona Sul<br><span class="big">R$ 3.750</span></p>
+      <p>Mensalidade · outros pontos<br><span class="big">R$ 2.750</span></p>
+      <p class="meta">Contrato mínimo de 3 meses</p>
+    </div>
+    <div class="box"><h3>Painel rodoviário · 50 m²</h3>
+      <p>Custo inicial<br><span class="big">R$ 2.500</span></p>
+      <p>Mensalidade · contrato de 3 meses<br><span class="big">R$ 2.750</span></p>
+      <p>Mensalidade · contrato de 6 meses<br><span class="big">R$ 2.550</span></p>
+      <p class="meta">Painéis de 105 m²: o dobro do valor do ponto de 50 m²</p>
+    </div>
+  </div>
+</section>
+
+<section id="condicoes" class="marca">
+  <div class="mhead"><h2>📋 Condições gerais</h2></div>
+  <ul>
+    <li>Contratos mínimos de <b>3 meses</b>.</li>
+    <li>O custo inicial é de produção e instalação da lona, pago na autorização da impressão.</li>
+    <li>As mensalidades começam <b>30 dias após a instalação</b>.</li>
+    <li>Durante o contrato dá pra trocar a lona de posição pra outro local, <b>sem custo adicional</b>.</li>
+    <li>Todos os valores são líquidos.</li>
+  </ul>
+</section>
+
+<section id="niteroi" class="marca">
+  <div class="mhead"><h2>🌉 Pontos disponíveis · Niterói e acessos</h2><span class="saude parado">mapa de 02/10/2026</span></div>
+  <p class="meta">Marcados em laranja os pontos da Região Oceânica, perto da futura Øliver's Piratininga. Em cinza, os que estão no sentido de São Gonçalo.</p>
+  <div class="tw"><table><thead><tr><th>Código</th><th>Endereço · referência</th><th>Sentido</th><th>Medida</th><th>Luz</th><th></th></tr></thead><tbody><tr><td><code>NIT-030.1</code></td><td><span class="pill p2">sentido SG</span> RJ 104 Km 1310 Km 1,3, Fonseca Niteroi<div class="meta">Subida da Cx Dagua</div></td><td>São Gonçalo · Medidas: 10,00 x 5,00       Iluminada: Não</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B052&#x27;52.3%22S+43%C2%B004&#x27;17.8%22W/@-22.88119,-43.0738033,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.88119!4d-43.07162?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-085.1</code></td><td>Rua Jansen de Melo 171 Centro Niterói, CEP 24.030-221<div class="meta">50m antes entrada da Ponte</div></td><td>Rio de Janeiro · Medidas: 6,00 x 3,00        Iluminada: Sim</td><td>6 x 3 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B053&#x27;12.7%22S+43%C2%B006&#x27;53.6%22W/@-22.88686,-43.1170733,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.88686!4d-43.11489?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-094.1</code></td><td>Frente ao Niteroi Shopping<div class="meta">Niterói Shopping</div></td><td>Icaraí · Esquerda</td><td>5,90 x 3,90 m</td><td>não</td><td><a href="https://goo.gl/maps/1zh97VNsNnYpv3td9">mapa</a></td></tr><tr><td><code>NIT-120.1</code></td><td>Av. Almte Ari Parreira 100 Icaraí Niterói , CEP 24.230-320<div class="meta">Dentro Auto center 105</div></td><td>Praia Icaraí · Medidas: 7,00 x 3,60           Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B054&#x27;41.4%22S+43%C2%B006&#x27;23.7%22W/@-22.91149,-43.1087633,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.91149!4d-43.10658?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-210.2</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 4901, Piratininga Niterói RJ CEP 24.350-310<div class="meta">Ao lado da Mitisubishi</div></td><td>Reg. Oceânica · Medidas: 7,00 x 3,60         Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B055&#x27;49.7%22S+43%C2%B003&#x27;57.4%22W/@-22.93048,-43.0681233,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.93048!4d-43.06594?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-217.1</code></td><td><span class="pill p1">Região Oceânica</span> Rua FrancelinoBarcelos, 9<div class="meta">Lado da GEPAR</div></td><td>Itaipu · Medidas: 5,35 x 3,40      Iluminada: Sim</td><td>5,35 x 3,40 m</td><td>💡 sim</td><td><a href="https://goo.gl/maps/UwWQsfeKoW5BYx1v8">mapa</a></td></tr><tr><td><code>NIT-221.1</code></td><td><span class="pill p1">Região Oceânica</span> Av. 10 , 262 frente posto BR<div class="meta">Frente posto BR</div></td><td>Charitas · Direito</td><td>6 x 3 m</td><td>💡 sim</td><td><a href="https://goo.gl/maps/3ZUthHeGAzSh1SuG7">mapa</a></td></tr><tr><td><code>NIT-230.2</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 5590, Piratininga Niterói RJ CEP 24.350-310<div class="meta">Frente Shopp Barravento</div></td><td>Centro · Esquerda - Rua</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B056&#x27;06.1%22S+43%C2%B003&#x27;51.0%22W/@-22.93504,-43.0663533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.93504!4d-43.06417?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-230.5</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 5590, Piratininga Niterói RJ CEP 24.350-310<div class="meta">Frente Shopp Barravento</div></td><td>Reg. Oceânica · Esquerda</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B056&#x27;08.2%22S+43%C2%B003&#x27;48.5%22W/@-22.9356,-43.0656533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.9356!4d-43.06347?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-240.1</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 388, Piratininga Niterói RJ CEP 24.350-310<div class="meta">Frente Shopp Piazza</div></td><td>Icaraí · Medidas: 7,00 x 3,60         Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B056&#x27;25.4%22S+43%C2%B002&#x27;53.2%22W/@-22.94039,-43.0502933,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.94039!4d-43.04811?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-255.2</code></td><td><span class="pill p1">Região Oceânica</span> RJ 108 Av. Ewerton Xavier, 2748<div class="meta">Lado Posto Shell</div></td><td>Itaipu · Medidas: 7,00 x 3,60         Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://goo.gl/maps/xetg4e6QFsL2">mapa</a></td></tr><tr><td><code>NIT-350.2</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 3095, Piratininga Niterói RJ CEP 24.350-000<div class="meta">Topo Subidão-frente retorno</div></td><td>Centro · Direita - Rua</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B055&#x27;12.9%22S+43%C2%B003&#x27;12.5%22W/@-22.92024,-43.0556633,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.92024!4d-43.05348?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-360.2</code></td><td><span class="pill p1">Região Oceânica</span> Estr Frco da Cruz Nunes, 1049, Monam Grande Niterói RJ CEP 24.350-340<div class="meta">Dentro Mat. Constr. Monan Gran</div></td><td>Reg. Oceânica · Esquerda - Rua</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B054&#x27;38.8%22S+43%C2%B003&#x27;18.5%22W/@-22.91078,-43.0573133,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.91078!4d-43.05513?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-370.3</code></td><td>Estr. Caetano Monteiro 790, Lgo da Batalhaa Niterói RJ CEP 24.320-570<div class="meta">Ao lado do FORUM</div></td><td>Pendotiba Centr · Esquerda - Rua</td><td>6 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B054&#x27;27.9%22S+43%C2%B003&#x27;48.3%22W/@-22.907765,-43.0655933,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.907765!4d-43.06341?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-375.1</code></td><td><span class="pill p1">Região Oceânica</span> Estr.Caetano Monteiro,174 esquina com Amadeu Gomes<div class="meta">Frente FORUM Reg Oceanica</div></td><td>Pendotiba · Medidas: 7,00 x 3,60        Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/R.+Amadeu+Gomes,+134+-+Sape,+Niter%C3%B3i+-+RJ/@-22.9075418,-43.0635544,18z/data=!4m5!3m4!1s0x998435f3f69e01:0x8b8f7df991b110f8!8m2!3d-22.9074566!4d-4">mapa</a></td></tr><tr><td><code>NIT-390.1</code></td><td>Estr Leonor da Gloria 29 Lgo Batalha, CEP 24.320-300 Niterói RJ<div class="meta">Esqu c Leopoldo Muilaert</div></td><td>Centro · Medidas: 7,00 x 3,60          Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B054&#x27;21.6%22S+43%C2%B003&#x27;51.7%22W/@-22.906014,-43.0665333,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.906014!4d-43.06435?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-419.3</code></td><td>RJ 104 Km 3 Casa Caipira<div class="meta">Frente Rest Casa Caipira</div></td><td>Niterói · Direita</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://maps.app.goo.gl/FtUbputafVfL7DK89">mapa</a></td></tr><tr><td><code>NIT-421.1</code></td><td><span class="pill p2">sentido SG</span> RJ 104 Rod Amaral Peixoto 1305 Km 3,5, Baldeador Niteroi CEO 24.140-380<div class="meta">Ao lado do CIEP Baldeador</div></td><td>São Gonçalo · Medidas: 10,00 x 3,00       Iluminada: Não</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B052&#x27;35.1%22S+43%C2%B003&#x27;18.9%22W/@-22.87642,-43.0574233,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.87642!4d-43.05524?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-421.2</code></td><td>RJ 104 Rod Amaral Peixoto 1305 Km 3,5, Baldeador Niteroi CEP 24.140-380<div class="meta">Ao lado do CIEP Baldeador</div></td><td>Niterói · Medidas: 10,00 x 3,00       Iluminada: Não</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B052&#x27;32.0%22S+43%C2%B003&#x27;17.5%22W/@-22.87557,-43.0570533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.87557!4d-43.05487?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.1</code></td><td>Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI Alto Morro</div></td><td>Niterói · Medidas: 20,00 x 3,00        Iluminada: Não</td><td>20 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;38.4%22S+43%C2%B006&#x27;23.3%22W/@-22.86066,-43.1086433,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.86066!4d-43.10646?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.2</code></td><td>Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI</div></td><td>Niterói · Medidas: 10,00 x 3,00       Iluminada: Não</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;40.0%22S+43%C2%B006&#x27;24.7%22W/@-22.861105,-43.1090333,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.861105!4d-43.10685?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.5</code></td><td><span class="pill p2">sentido SG</span> Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI</div></td><td>São Gonçalo · Direita</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;42.1%22S+43%C2%B006&#x27;24.8%22W/@-22.861695,-43.1090613,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.861695!4d-43.106878?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.9</code></td><td>Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI</div></td><td>Niterói · Medidas: 10,00 x 3,00       Iluminada: Não</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;44.3%22S+43%C2%B006&#x27;25.8%22W/@-22.862311,-43.1093433,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.862311!4d-43.10716?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-820.1</code></td><td><span class="pill p2">sentido SG</span> Av do Contorno 694 Barreto Niterói RJ, CEP 24.110-075<div class="meta">Frente Leroy Merlin</div></td><td>São Gonçalo · Medidas: 7,00 x 3,60         Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B052&#x27;32.2%22S+43%C2%B006&#x27;37.7%22W/@-22.8756,-43.1126533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.8756!4d-43.11047?hl=pt-BR">mapa</a></td></tr></tbody></table></div>
+  <p class="links">📄 <a href="mapa-niteroi-acessos-out26.pdf">PDF completo com as fotos de cada ponto · Niterói e acessos</a></p>
+</section>
+
+<section id="rodovias" class="marca">
+  <div class="mhead"><h2>🛣️ Pontos disponíveis · rodovias</h2><span class="saude parado">mapa de outubro/2026</span></div>
+  <p class="meta">Em cinza, os pontos da Via Lagos perto de Araruama e Iguaba, e os que estão no sentido de São Gonçalo.</p>
+  <div class="tw"><table><thead><tr><th>Código</th><th>Endereço · referência</th><th>Sentido</th><th>Medida</th><th>Luz</th><th></th></tr></thead><tbody><tr><td><code>ARA-916.3</code></td><td><span class="pill p2">Região dos Lagos</span> RJ 124 Via Lagos 557 Km 41, Araruama - CEP 28.970-000 RJ<div class="meta">100m após a SOS CCR</div></td><td>Buzios · Esquerda</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B049&#x27;07.8%22S+42%C2%B017&#x27;20.9%22W/@-22.8191663,-42.2896872,249m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d-22.81884!4d-42.289132">mapa</a></td></tr><tr><td><code>ARA-916.5</code></td><td><span class="pill p2">Região dos Lagos</span> RJ 124 Via Lagos 565 Km 41, Araruama - CEP 28.970-000 RJ<div class="meta">300m após a SOS CCR</div></td><td>Buzios · Medidas: 10,00 x 5,00       Iluminada: Não</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B049&#x27;08.3%22S+42%C2%B017&#x27;13.4%22W/@-22.818978,-42.2892497,994m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.818978!4d-42.287061">mapa</a></td></tr><tr><td><code>ARA-918.3</code></td><td><span class="pill p2">Região dos Lagos</span> RJ 124 Km 37,5<div class="meta">Antes da Ponte de São Vicente</div></td><td>Buzios · Direita</td><td>10 x 5 m</td><td>não</td><td><a href="https://goo.gl/maps/qpR7spVw2dm8KukG8">mapa</a></td></tr><tr><td><code>IGU-912.1</code></td><td><span class="pill p2">Região dos Lagos</span> RJ 124 Via Lagos 7.622 Km 52, Iguaba Grande CEP 28.960-000 RJ<div class="meta">Via lagos esquina c/ Estr. Sal</div></td><td>Buzios · Esquerda - Rua</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B049&#x27;39.0%22S+42%C2%B011&#x27;21.5%22W/@-22.8275,-42.1914833,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.8275!4d-42.1893?hl=pt-BR">mapa</a></td></tr><tr><td><code>IGU-915.3</code></td><td><span class="pill p2">Região dos Lagos</span> RJ 124 Via Lagos 783 Km 45, Iguaba Grande CEP 28.970-000 RJ<div class="meta">à 2km entrada de Iguaba Grande</div></td><td>Buzios · Medidas: 21,00 x 5,00        Iluminada: Não</td><td>21 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B049&#x27;25.0%22S+42%C2%B014&#x27;46.7%22W/@-22.8236,-42.2484833,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.8236!4d-42.2463?hl=pt-BR">mapa</a></td></tr><tr><td><code>ITA-968.1</code></td><td>RJ 116 Rod.Pres.João Goulart Km 4, Chacara Bele Vista Itaborai - RJ<div class="meta">1Km após pedágio viad. comperj</div></td><td>Friburgo · Medidas: 10,00 x 5,00       Iluminada: Não</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B042&#x27;05.7%22S+42%C2%B048&#x27;08.8%22W/@-22.70157,-42.8046133,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.70157!4d-42.80243?hl=pt-BR">mapa</a></td></tr><tr><td><code>ITA-980.9</code></td><td>Rod Gov Mario Covas Km 283 Itavile Itaboraí - RJ<div class="meta">Antes do SOS Autopista</div></td><td>Buzios · Esquerda</td><td>10 x 5 m</td><td>não</td><td><a href="https://goo.gl/maps/a2aiTCF1TSYG8Qmt5">mapa</a></td></tr><tr><td><code>ITA-990.1</code></td><td>Rod. Gov. Mário Covas, 699, Ampliação Itaboraí - RJ<div class="meta">Ao lado da Piscinas IGUI</div></td><td>Rio de Janeiro · Esquerda - Rua</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B045&#x27;48.1%22S+42%C2%B051&#x27;06.2%22W/@-22.76336,-42.8539133,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.76336!4d-42.85173?hl=pt-BR">mapa</a></td></tr><tr><td><code>ITA-994.2</code></td><td>Rod. Gov. Mário Covas, 814, Vila Gabriela Itaboraí - RJ<div class="meta">Ao lado do Mc Donald Manilha</div></td><td>Rio de Janeiro · Direita</td><td>21 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B045&#x27;59.4%22S+42%C2%B054&#x27;38.4%22W/@-22.7665,-42.9128533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.7665!4d-42.91067?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.1</code></td><td>Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI Alto Morro</div></td><td>Niterói · Medidas: 20,00 x 3,00        Iluminada: Não</td><td>20 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;38.4%22S+43%C2%B006&#x27;23.3%22W/@-22.86066,-43.1086433,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.86066!4d-43.10646?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-790.5</code></td><td><span class="pill p2">sentido SG</span> Av do Contorno 2115 Barreto Niterói RJ, CEP 24.210-105<div class="meta">Frente ENAVI</div></td><td>São Gonçalo · Direita</td><td>10 x 3 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;42.1%22S+43%C2%B006&#x27;24.8%22W/@-22.861695,-43.1090613,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.861695!4d-43.106878?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-800.2</code></td><td><span class="pill p2">sentido SG</span> Av do Contorno 1.837 Barreto Niterói RJ<div class="meta">Frente a ENAVI</div></td><td>São Gonçalo · Direita</td><td>10 x 3 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B051&#x27;48.4%22S+43%C2%B006&#x27;26.1%22W/@-22.86344,-43.1094333,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.86344!4d-43.10725?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-820.1</code></td><td><span class="pill p2">sentido SG</span> Av do Contorno 694 Barreto Niterói RJ, CEP 24.110-075<div class="meta">Frente Leroy Merlin</div></td><td>São Gonçalo · Medidas: 7,00 x 3,60         Iluminada: Sim</td><td>7 x 3,60 m</td><td>💡 sim</td><td><a href="https://www.google.com.br/maps/place/22%C2%B052&#x27;32.2%22S+43%C2%B006&#x27;37.7%22W/@-22.8756,-43.1126533,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.8756!4d-43.11047?hl=pt-BR">mapa</a></td></tr><tr><td><code>NIT-875.2</code></td><td>Rod Amaral Peixoto 10 Km 11, Itaocaia Valley Niterói RJ CEP 24.942-395<div class="meta">100m após entrada Pedreira</div></td><td>Niteroi · Direita - Rua</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B054&#x27;03.9%22S+42%C2%B057&#x27;15.2%22W/@-22.901071,-42.9564143,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.901071!4d-42.954231?hl=pt-BR">mapa</a></td></tr><tr><td><code>RBO-924.1</code></td><td>RJ 124 Via Lagos 1069 Km 23, Palmital Rio Bonito RJ Cep 28.800-000<div class="meta">100m após pedágio</div></td><td>Buzios · Esquerda - Rua</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B047&#x27;57.7%22S+42%C2%B027&#x27;31.9%22W/@-22.799356,-42.4610563,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.799356!4d-42.458873?hl=pt-BR">mapa</a></td></tr><tr><td><code>RBO-928.5</code></td><td>RJ 124 Via Lagos 888 Km 17, Eng.Castelo Rio Bonito RJ Cep 28.800-000<div class="meta">4 Km após Boa Esperança</div></td><td>Buzios · Medidas: 10,00 x 5,00       Iluminada: Não</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B048&#x27;17.3%22S+42%C2%B029&#x27;49.2%22W/@-22.8048,-42.4991833,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.8048!4d-42.497?hl=pt-BR">mapa</a></td></tr><tr><td><code>RBO-940.2</code></td><td>BR 101 Rod Gov Mario Covas Km 269, Ipê Rio Bonito RJ<div class="meta">1 Km após PRF de Rio Bonito</div></td><td>Buzios · Esquerda - Rua</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B042&#x27;46.5%22S+42%C2%B040&#x27;21.6%22W/@-22.71292,-42.6748593,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.71292!4d-42.672676?hl=pt-BR">mapa</a></td></tr><tr><td><code>TAN-948.0</code></td><td>BR 101 Rod Gov Mario Covas Km 276 Santo Antonio Tangua RJ<div class="meta">300m antes Kiosque do Alemão</div></td><td>Rio de Janeiro · Esquerda</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B044&#x27;24.9%22S+42%C2%B045&#x27;40.8%22W/@-22.740251,-42.7635253,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.740251!4d-42.761342?hl=pt-BR">mapa</a></td></tr><tr><td><code>TAN-948.8</code></td><td>BR 101 Rod Gov Mario Covas 284 Km 278, Bandeirante Tanguá RJ<div class="meta">1 km após Kiosque do Alemão</div></td><td>Buzios · Direita</td><td>10 x 5 m</td><td>não</td><td><a href="https://www.google.com.br/maps/place/22%C2%B044&#x27;22.2%22S+42%C2%B044&#x27;40.6%22W/@-22.739494,-42.7468043,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-22.739494!4d-42.744621?hl=pt-BR">mapa</a></td></tr></tbody></table></div>
+  <p class="links">📄 <a href="mapa-vagas-rodovias-out26.pdf">PDF completo com as fotos de cada ponto · rodovias</a></p>
+</section>
+
+<section id="proximos" class="marca" style="border-color:var(--at)">
+  <div class="mhead"><h2>⏳ Aguardando outros orçamentos do Edilson</h2><span class="saude atencao">em andamento</span></div>
+  <p>Reforçando as áreas de interesse que o Matheus comentou na reunião: <b>Tijuca, Jacarepaguá, Recreio e arredores</b>.</p>
+</section>
+
+<footer>Grupo ROB · Seven7 · montado em 15/10/2026 a partir do material enviado pelo Edilson.</footer>
+</div>
+</body>
+</html>
